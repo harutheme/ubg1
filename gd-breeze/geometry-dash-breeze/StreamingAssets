@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="EsDuUCIyNZxbftFXAY87w9sOWlZXLYzxo2gQpqiG">
+    <title>Geometry Dash - Play Official Game Online</title>
+<meta name="title" content="Geometry Dash - Play Official Game Online">
+<meta name="description" content="Play Geometry Dash in your browser. Jump, fly, & flip through challenging levels with music-synced gameplay. No download required. Play for free on Geo Dash.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://geodash.org/">
+<meta property="og:title" content="Geometry Dash - Play Official Game Online">
+<meta property="og:description" content="Play Geometry Dash in your browser. Jump, fly, & flip through challenging levels with music-synced gameplay. No download required. Play for free on Geo Dash.">
+<meta property="og:image" content="https://geodash.org/images/geodash-game-og-image.webp">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://geodash.org/">
+<meta property="twitter:title" content="Geometry Dash - Play Official Game Online">
+<meta property="twitter:description" content="Play Geometry Dash in your browser. Jump, fly, & flip through challenging levels with music-synced gameplay. No download required. Play for free on Geo Dash.">
+<meta property="twitter:image" content="https://geodash.org/images/geodash-game-og-image.webp">
+<link rel="canonical" href="https://geodash.org/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Geodash.org">
+<link rel="preload" as="image" imagesrcset="https://geodash.org/images/gd-mobile-image.webp 500w,https://geodash.org/images/geodash-game-image.webp 815w" imagesizes="(max-width: 600px) 500px, 815px" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/geist/v3/gyByhwUxId8gMEwcGFWNOITd.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <style>
+        body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:#18181b;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;--space:1rem;overflow-x:hidden;}
+        .nav-link{display:block;padding:var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);font-size:var(--bs-nav-link-font-size);font-weight:var(--bs-nav-link-font-weight);color:var(--bs-nav-link-color);text-decoration:none;background:0;border:0;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;}
+        @media (prefers-reduced-motion:reduce){
+        .nav-link{transition:none;}
+        }
+        .nav-link:focus,.nav-link:hover{color:var(--bs-nav-link-hover-color);}
+        .nav-link:disabled{color:var(--bs-nav-link-disabled-color);pointer-events:none;cursor:default;}
+        .navbar{--bs-navbar-padding-x:0;--bs-navbar-padding-y:.5rem;--bs-navbar-color:rgba(var(--bs-emphasis-color-rgb),0.65);--bs-navbar-hover-color:rgba(var(--bs-emphasis-color-rgb),0.8);--bs-navbar-disabled-color:rgba(var(--bs-emphasis-color-rgb),0.3);--bs-navbar-active-color:rgba(var(--bs-emphasis-color-rgb),1);--bs-navbar-brand-padding-y:.3125rem;--bs-navbar-brand-margin-end:1rem;--bs-navbar-brand-font-size:1.25rem;--bs-navbar-brand-color:rgba(var(--bs-emphasis-color-rgb),1);--bs-navbar-brand-hover-color:rgba(var(--bs-emphasis-color-rgb),1);--bs-navbar-nav-link-padding-x:.5rem;--bs-navbar-toggler-padding-y:.25rem;--bs-navbar-toggler-padding-x:.75rem;--bs-navbar-toggler-font-size:1.25rem;--bs-navbar-toggler-icon-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");--bs-navbar-toggler-border-color:rgba(var(--bs-emphasis-color-rgb),0.15);--bs-navbar-toggler-border-radius:var(--bs-border-radius);--bs-navbar-toggler-focus-width:.25rem;--bs-navbar-toggler-transition:box-shadow .15s ease-in-out;position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);}
+        .navbar>.container-fluid{display:flex;flex-wrap:inherit;align-items:center;justify-content:space-between;}
+        .navbar-brand{padding-top:var(--bs-navbar-brand-padding-y);padding-bottom:var(--bs-navbar-brand-padding-y);margin-right:var(--bs-navbar-brand-margin-end);font-size:var(--bs-navbar-brand-font-size);color:var(--bs-navbar-brand-color);text-decoration:none;white-space:nowrap;}
+        .navbar-brand:focus,.navbar-brand:hover{color:var(--bs-navbar-brand-hover-color);}
+        .navbar-nav{--bs-nav-link-padding-x:0;--bs-nav-link-padding-y:.5rem;--bs-nav-link-color:var(--bs-navbar-color);--bs-nav-link-hover-color:var(--bs-navbar-hover-color);--bs-nav-link-disabled-color:var(--bs-navbar-disabled-color);display:flex;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none;}
+        .navbar-collapse{flex-grow:1;flex-basis:100%;align-items:center;}
+        .navbar-toggler{padding:var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);font-size:var(--bs-navbar-toggler-font-size);line-height:1;color:var(--bs-navbar-color);background-color:transparent;border:0;border-radius:var(--bs-navbar-toggler-border-radius);transition:var(--bs-navbar-toggler-transition);}
+        .collapse:not(.show){display:none;}
+        @media (prefers-reduced-motion:reduce){
+        .navbar-toggler{transition:none;}
+        }
+        .navbar-toggler:hover{text-decoration:none;}
+        .navbar-toggler:focus{text-decoration:none;outline:0;box-shadow:0 0 0 var(--bs-navbar-toggler-focus-width);}
+        .navbar-toggler-icon{display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;background-image:var(--bs-navbar-toggler-icon-bg);background-repeat:no-repeat;background-position:center;background-size:100%;}
+        @media (min-width: 1283px){
+        .navbar-expand-xl{flex-wrap:nowrap;justify-content:flex-start;}
+        .navbar-expand-xl .navbar-nav{flex-direction:row;}
+        .navbar-expand-xl .navbar-nav .nav-link{padding-right:var(--bs-navbar-nav-link-padding-x);padding-left:var(--bs-navbar-nav-link-padding-x);}
+        .navbar-expand-xl .navbar-collapse{display:flex!important;flex-basis:auto;}
+        .navbar-expand-xl .navbar-toggler{display:none;}
+        }
+        .py-3{padding-top:1rem!important;padding-bottom:1rem!important;}
+        .container-fluid{--bs-gutter-x:1.5rem;--bs-gutter-y:0;width:100%;padding-right:calc(var(--bs-gutter-x)*.5);padding-left:calc(var(--bs-gutter-x)*.5);margin-right:auto;margin-left:auto;}
+        #gameIframe .game-container,#gameIframe .game-content,#gameIframe .game-iframe-container,#gameIframe #bgame,#gameIframe #iframe{display:flex;flex-direction:column;min-height:0;}
+        .game-container{overflow:hidden;border-radius:18px;}
+        .game-iframe-container{position:relative;overflow:hidden;width:100%;min-height:500px;}
+        .game-iframe{position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%;z-index:10;}
+        #game{margin:auto;overflow:hidden;}
+        iframe{width:100%;overflow:hidden;}
+        #loader{position:relative;flex:1 1 auto;min-height:0;overflow:hidden;height:500px;margin:auto;color:#fff;text-align:left;}
+        .preview #playGame{height:100%;text-align:center;margin:auto;cursor:pointer;}
+        .preview .play{position:absolute;left:0;top:13%!important;right:0;bottom:0;display:flex;flex-direction:column;}
+        .brand-logo{text-align:center;margin-top:25px;}
+        .preview .playimg{overflow:hidden;width:190px;margin:50px auto 0 auto;border:solid 2px rgba(255,255,255,0.4);border-radius:20px;}
+        .playBT{display:flex;justify-content:center;align-items:center;width:160px;height:60px;padding:0 20px;margin:20px auto 50px auto;border-radius:30px;background-color:#222;box-shadow:0 0 8px 0 rgba(0,0,0,0.3);transition:all 400ms cubic-bezier(.47,1.64,.41,.8);}
+        .game-header{display:flex;flex-wrap:wrap;-webkit-box-pack:center;justify-content:center;min-height:55px;height:auto;color:#fff;width:100%;margin-top:12px;box-sizing:border-box;overflow:hidden;padding:4px 10px;background:#27272a;border-radius:8px;}
+        .game-header-box{display:flex;width:100%;-webkit-box-pack:justify;justify-content:space-between;flex-wrap:wrap;-webkit-box-align:center;align-items:center;}
+        .game-title{padding-left:10px;}
+        .fw-bold{font-weight:700!important;}
+        .game-header-extend{display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:end;justify-content:flex-end;}
+        .rate-div{display:flex;-webkit-box-align:center;align-items:center;justify-content:space-around;padding-left:15px;color:#292433;font-size:16px;font-weight:500;line-height:.5;}
+        .jq-ry-container{position:relative;line-height:0;display:block;cursor:pointer;box-sizing:content-box;direction:ltr;padding:0 5px;}
+        .jq-ry-container>.jq-ry-group-wrapper{position:relative;width:100%;}
+        .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group{width:100%;}
+        .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group{position:relative;line-height:0;z-index:10;white-space:nowrap;}
+        .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group>svg{display:inline-block;}
+        .rating-info{color:#fff;}
+        .btn{--bs-btn-padding-x:.75rem;--bs-btn-padding-y:.375rem;--bs-btn-font-size:1rem;--bs-btn-font-weight:400;--bs-btn-line-height:1.5;--bs-btn-color:var(--bs-body-color);--bs-btn-bg:transparent;--bs-btn-border-width:var(--bs-border-width);--bs-btn-border-color:transparent;--bs-btn-border-radius:var(--bs-border-radius);--bs-btn-hover-border-color:transparent;--bs-btn-box-shadow:inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);--bs-btn-disabled-opacity:.65;--bs-btn-focus-box-shadow:0 0 0 .25rem rgba(var(--bs-btn-focus-shadow-rgb),.5);display:inline-block;font-family:var(--bs-btn-font-family);font-size:var(--bs-btn-font-size);font-weight:var(--bs-btn-font-weight);line-height:var(--bs-btn-line-height);color:var(--bs-btn-color);text-align:center;vertical-align:middle;cursor:pointer;user-select:none;background-color:var(--bs-btn-bg);padding:var(--bs-btn-padding-y) var(--bs-btn-padding-x);text-decoration:none;border:var(--bs-btn-border-width) solid var(--bs-btn-border-color);border-radius:var(--bs-btn-border-radius);transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+        .preview .glow{width:100%;max-width:815px;text-align:center;filter:blur(15px) brightness(1.2);aspect-ratio:815 / 500;opacity:.4;}
+        #loader{width:100%;}
+        *,::after,::before{box-sizing:border-box;}
+        .row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x)*.5);padding-left:calc(var(--bs-gutter-x)*.5);margin-top:var(--bs-gutter-y);}
+        .col-12{flex:0 0 auto;width:100%;}
+        .px-3{padding-right:1rem!important;padding-left:1rem!important;}
+        .pb-3{padding-bottom:1rem!important;}
+        .text-center{text-align:center!important;}
+        *{scrollbar-width:auto;scrollbar-color:var(--bs-warning) var(--bs-body-bg);}
+        *::-webkit-scrollbar{width:16px;}
+        *::-webkit-scrollbar-track{background:var(--bs-body-bg);}
+        *::-webkit-scrollbar-thumb{background-color:var(--bs-warning);border-radius:10px;border:3px solid #fff;}
+        @media (min-width:1200px){
+        .col-xl-2{flex:0 0 auto!important;width:16.66666667%!important;}
+        }
+        @media (max-width:1199px){
+        .header_ad_banner{display:none;}
+        }
+        @media (min-width:1200px){
+        .col-xl-2{flex:0 0 auto!important;width:16.66666667%!important;}
+        }
+        @media (max-width: 1199px){
+        .header_ad_banner{display:none;}
+        }
+        body{overflow-x:hidden;}
+        *,::after,::before{box-sizing:border-box;}
+        body{margin:0;font-family:var(--bs-body-font-family);font-size:1rem;font-weight:300;line-height:1.5;color:#fff;text-align:var(--bs-body-text-align);background-color:#18181b;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;}
+        hr{margin:1rem 0;color:inherit;border:0;border-top:var(--bs-border-width) solid;opacity:.25;}
+        .h2,.h5,h1,h2,h3{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;color:var(--bs-heading-color);}
+        h1{font-size:calc(1.375rem + 1.5vw);}
+        @media (min-width:1200px){
+        h1{font-size:2.5rem;}
+        }
+        .h2,h2{font-size:calc(1.325rem + .9vw);}
+        @media (min-width:1200px){
+        .h2,h2{font-size:2rem;}
+        }
+        h3{font-size:calc(1.3rem + .6vw);}
+        @media (min-width:1200px){
+        h3{font-size:1.75rem;}
+        }
+        .h5{font-size:1.25rem;}
+        p{margin-top:0;margin-bottom:1rem;opacity:75%;}
+        ul{padding-left:2rem;}
+        ul{margin-top:0;margin-bottom:1rem;}
+        ul ul{margin-bottom:0;}
+        b{font-weight:700;}
+        iframe{border:0;}
+        a{color:var(--bs-warning);text-decoration:underline;}
+        a:hover{--bs-link-color-rgb:var(--bs-link-hover-color-rgb);}
+        img,svg{vertical-align:middle;}
+        button{border-radius:0;}
+        button:focus:not(:focus-visible){outline:0;}
+        button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
+        button{text-transform:none;}
+        [type=button],button{-webkit-appearance:button;}
+        [type=button]:not(:disabled),button:not(:disabled){cursor:pointer;}
+        .list-unstyled{padding-left:0;list-style:none;}
+        .img-fluid{max-width:100%;height:auto;}
+        .container-fluid{--bs-gutter-x:1.5rem;--bs-gutter-y:0;width:100%;padding-right:calc(var(--bs-gutter-x)*.5);padding-left:calc(var(--bs-gutter-x)*.5);margin-right:auto;margin-left:auto;}
+        .row{--bs-gutter-x:1.5rem;--bs-gutter-y:0;display:flex;flex-wrap:wrap;}
+        .row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x)*.5);padding-left:calc(var(--bs-gutter-x)*.5);margin-top:var(--bs-gutter-y);}
+        .col-6{flex:0 0 auto;width:50%;}
+        .col-12{flex:0 0 auto;width:100%;}
+        @media (min-width:768px){
+        .col-md-4{flex:0 0 auto;width:33.33333333%;}
+        .col-md-6{flex:0 0 auto;width:50%;}
+        .col-md-10{flex:0 0 auto;width:83.33333333%;}
+        }
+        @media (min-width:992px){
+        .col-lg-2{flex:0 0 auto;width:16.66666667%;}
+        .col-lg-3{flex:0 0 auto;width:25%;}
+        .col-lg-4{flex:0 0 auto;width:33.33333333%;}
+        .col-lg-8{flex:0 0 auto;width:66.66666667%;}
+        }
+        .btn{--bs-btn-padding-x:.75rem;--bs-btn-padding-y:.375rem;--bs-btn-font-size:1rem;--bs-btn-font-weight:400;--bs-btn-line-height:1.5;--bs-btn-color:var(--bs-body-color);--bs-btn-bg:transparent;--bs-btn-border-width:var(--bs-border-width);--bs-btn-border-color:transparent;--bs-btn-border-radius:var(--bs-border-radius);--bs-btn-hover-border-color:transparent;--bs-btn-box-shadow:inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);--bs-btn-disabled-opacity:.65;--bs-btn-focus-box-shadow:0 0 0 .25rem rgba(var(--bs-btn-focus-shadow-rgb),.5);display:inline-block;padding:var(--bs-btn-padding-y) var(--bs-btn-padding-x);font-family:var(--bs-btn-font-family);font-size:var(--bs-btn-font-size);font-weight:var(--bs-btn-font-weight);line-height:var(--bs-btn-line-height);color:var(--bs-btn-color);text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;border:var(--bs-btn-border-width) solid var(--bs-btn-border-color);border-radius:var(--bs-btn-border-radius);background-color:var(--bs-btn-bg);transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+        @media (prefers-reduced-motion:reduce){
+        .btn{transition:none;}
+        }
+        .btn:hover{color:var(--bs-btn-hover-color);background-color:var(--bs-btn-hover-bg);border-color:var(--bs-btn-hover-border-color);}
+        .btn:disabled{color:var(--bs-btn-disabled-color);pointer-events:none;background-color:var(--bs-btn-disabled-bg);border-color:var(--bs-btn-disabled-border-color);opacity:var(--bs-btn-disabled-opacity);}
+        .btn-link{--bs-btn-font-weight:400;--bs-btn-color:var(--bs-link-color);--bs-btn-bg:transparent;--bs-btn-border-color:transparent;--bs-btn-hover-color:var(--bs-link-hover-color);--bs-btn-hover-border-color:transparent;--bs-btn-active-color:var(--bs-link-hover-color);--bs-btn-active-border-color:transparent;--bs-btn-disabled-color:#6c757d;--bs-btn-disabled-border-color:transparent;--bs-btn-box-shadow:0 0 0 #000;--bs-btn-focus-shadow-rgb:49,132,253;text-decoration:underline;}
+        .btn-link:hover{color:var(--bs-btn-hover-color);}
+        .collapse:not(.show){display:none;}
+        .dropdown-toggle{white-space:nowrap;}
+        .dropdown-toggle::after{display:inline-block;margin-left:.255em;vertical-align:.255em;content:"";border-top:.3em solid;border-right:.3em solid transparent;border-bottom:0;border-left:.3em solid transparent;}
+        .dropdown-toggle:empty::after{margin-left:0;}
+        .dropdown-menu{--bs-dropdown-zindex:1000;--bs-dropdown-min-width:10rem;--bs-dropdown-padding-x:0;--bs-dropdown-padding-y:.5rem;--bs-dropdown-spacer:.125rem;--bs-dropdown-font-size:1rem;--bs-dropdown-color:var(--bs-body-color);--bs-dropdown-bg:var(--bs-body-bg);--bs-dropdown-border-color:var(--bs-border-color-translucent);--bs-dropdown-border-radius:var(--bs-border-radius);--bs-dropdown-border-width:var(--bs-border-width);--bs-dropdown-inner-border-radius:calc(var(--bs-border-radius) - var(--bs-border-width));--bs-dropdown-divider-bg:var(--bs-border-color-translucent);--bs-dropdown-divider-margin-y:.5rem;--bs-dropdown-box-shadow:var(--bs-box-shadow);--bs-dropdown-link-color:var(--bs-body-color);--bs-dropdown-link-hover-color:var(--bs-body-color);--bs-dropdown-link-hover-bg:var(--bs-tertiary-bg);--bs-dropdown-link-active-color:#fff;--bs-dropdown-link-active-bg:#0d6efd;--bs-dropdown-link-disabled-color:var(--bs-tertiary-color);--bs-dropdown-item-padding-x:1rem;--bs-dropdown-item-padding-y:.25rem;--bs-dropdown-header-color:#6c757d;--bs-dropdown-header-padding-x:1rem;--bs-dropdown-header-padding-y:.5rem;position:absolute;z-index:var(--bs-dropdown-zindex);display:none;min-width:var(--bs-dropdown-min-width);padding:var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);margin:0;font-size:var(--bs-dropdown-font-size);color:var(--bs-dropdown-color);text-align:left;list-style:none;background-color:var(--bs-dropdown-bg);background-clip:padding-box;border:var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);border-radius:var(--bs-dropdown-border-radius);}
+        .dropdown-item{display:block;width:100%;padding:var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);clear:both;font-weight:400;color:var(--bs-dropdown-link-color);text-align:inherit;text-decoration:none;white-space:nowrap;background-color:transparent;border:0;border-radius:var(--bs-dropdown-item-border-radius,0);}
+        .dropdown-item:focus,.dropdown-item:hover{color:var(--bs-dropdown-link-hover-color);background-color:var(--bs-dropdown-link-hover-bg);}
+        .dropdown-item.active,.dropdown-item:active{color:var(--bs-dropdown-link-active-color);text-decoration:none;background-color:var(--bs-dropdown-link-active-bg);}
+        .dropdown-item:disabled{color:var(--bs-dropdown-link-disabled-color);pointer-events:none;background-color:transparent;}
+        .nav-link{display:block;padding:var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);font-size:var(--bs-nav-link-font-size);font-weight:var(--bs-nav-link-font-weight);color:var(--bs-nav-link-color);text-decoration:none;background:0;border:0;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;}
+        @media (prefers-reduced-motion:reduce){
+        .nav-link{transition:none;}
+        }
+        .nav-link:focus,.nav-link:hover{color:var(--bs-nav-link-hover-color);}
+        .nav-link:disabled{color:var(--bs-nav-link-disabled-color);pointer-events:none;cursor:default;}
+        .navbar{--bs-navbar-padding-x:0;--bs-navbar-padding-y:.5rem;--bs-navbar-color:rgba(var(--bs-emphasis-color-rgb),0.65);--bs-navbar-hover-color:rgba(var(--bs-emphasis-color-rgb),0.8);--bs-navbar-disabled-color:rgba(var(--bs-emphasis-color-rgb),0.3);--bs-navbar-active-color:rgba(var(--bs-emphasis-color-rgb),1);--bs-navbar-brand-padding-y:.3125rem;--bs-navbar-brand-margin-end:1rem;--bs-navbar-brand-font-size:1.25rem;--bs-navbar-brand-color:rgba(var(--bs-emphasis-color-rgb),1);--bs-navbar-brand-hover-color:rgba(var(--bs-emphasis-color-rgb),1);--bs-navbar-nav-link-padding-x:.5rem;--bs-navbar-toggler-padding-y:.25rem;--bs-navbar-toggler-padding-x:.75rem;--bs-navbar-toggler-font-size:1.25rem;--bs-navbar-toggler-icon-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");--bs-navbar-toggler-border-color:rgba(var(--bs-emphasis-color-rgb),0.15);--bs-navbar-toggler-border-radius:var(--bs-border-radius);--bs-navbar-toggler-focus-width:.25rem;--bs-navbar-toggler-transition:box-shadow .15s ease-in-out;position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);}
+        .navbar>.container-fluid{display:flex;flex-wrap:inherit;align-items:center;justify-content:space-between;}
+        .navbar-brand{padding-top:var(--bs-navbar-brand-padding-y);padding-bottom:var(--bs-navbar-brand-padding-y);margin-right:var(--bs-navbar-brand-margin-end);font-size:var(--bs-navbar-brand-font-size);color:var(--bs-navbar-brand-color);text-decoration:none;white-space:nowrap;}
+        .navbar-brand:focus,.navbar-brand:hover{color:var(--bs-navbar-brand-hover-color);}
+        .navbar-nav{--bs-nav-link-padding-x:0;--bs-nav-link-padding-y:.5rem;--bs-nav-link-color:var(--bs-navbar-color);--bs-nav-link-hover-color:var(--bs-navbar-hover-color);--bs-nav-link-disabled-color:var(--bs-navbar-disabled-color);display:flex;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none;}
+        .navbar-collapse{flex-grow:1;flex-basis:100%;align-items:center;}
+        .navbar-toggler{padding:var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);font-size:var(--bs-navbar-toggler-font-size);line-height:1;color:var(--bs-navbar-color);background-color:transparent;border:0;border-radius:var(--bs-navbar-toggler-border-radius);transition:var(--bs-navbar-toggler-transition);}
+        @media (prefers-reduced-motion:reduce){
+        .navbar-toggler{transition:none;}
+        }
+        .navbar-toggler:hover{text-decoration:none;}
+        .navbar-toggler:focus{text-decoration:none;outline:0;box-shadow:0 0 0 var(--bs-navbar-toggler-focus-width);}
+        .navbar-toggler-icon{display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;background-image:var(--bs-navbar-toggler-icon-bg);background-repeat:no-repeat;background-position:center;background-size:100%;}
+        @media (min-width:1283px){
+        .navbar-expand-xl{flex-wrap:nowrap;justify-content:flex-start;}
+        .navbar-expand-xl .navbar-nav{flex-direction:row;}
+        .navbar-expand-xl .navbar-nav .nav-link{padding-right:var(--bs-navbar-nav-link-padding-x);padding-left:var(--bs-navbar-nav-link-padding-x);}
+        .navbar-expand-xl .navbar-collapse{display:flex!important;flex-basis:auto;}
+        .navbar-expand-xl .navbar-toggler{display:none;}
+        }
+        .opacity-50{opacity:.5!important;}
+        .opacity-100{opacity:1!important;}
+        .d-block{display:block!important;}
+        .d-flex{display:flex!important;}
+        .d-none{display:none!important;}
+        .border{border:var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;}
+        .flex-wrap{flex-wrap:wrap!important;}
+        .justify-content-center{justify-content:center!important;}
+        .align-items-center{align-items:center!important;}
+        .m-1{margin:.25rem!important;}
+        .m-auto{margin:auto!important;}
+        .mx-2{margin-right:.5rem!important;margin-left:.5rem!important;}
+        .mx-auto{margin-right:auto!important;margin-left:auto!important;}
+        .my-2{margin-top:.5rem!important;margin-bottom:.5rem!important;}
+        .my-4{margin-top:1.5rem!important;margin-bottom:1.5rem!important;}
+        .mt-2{margin-top:.5rem!important;}
+        .me-1{margin-right:.25rem!important;}
+        .me-2{margin-right:.5rem!important;}
+        .me-3{margin-right:1rem!important;}
+        .mb-0{margin-bottom:0!important;}
+        .mb-1{margin-bottom:.25rem!important;}
+        .mb-2{margin-bottom:.5rem!important;}
+        .mb-3{margin-bottom:1rem!important;}
+        .mb-4{margin-bottom:1.5rem!important;}
+        .mb-5{margin-bottom:3rem!important;}
+        .p-2{padding:.5rem!important;}
+        .p-3{padding:1rem!important;}
+        .px-3{padding-right:1rem!important;padding-left:1rem!important;}
+        .py-2{padding-top:.5rem!important;padding-bottom:.5rem!important;}
+        .py-3{padding-top:1rem!important;padding-bottom:1rem!important;}
+        .pt-4{padding-top:1.5rem!important;}
+        .pb-3{padding-bottom:1rem!important;}
+        .ps-0{padding-left:0!important;}
+        .fw-bold{font-weight:700!important;}
+        .text-center{text-align:center!important;}
+        .rounded-3{border-radius:var(--bs-border-radius-lg)!important;}
+        .rounded-4{border-radius:var(--bs-border-radius-xl)!important;}
+        @media (min-width:768px){
+        .p-md-4{padding:1.5rem!important;}
+        .px-md-5{padding-right:3rem!important;padding-left:3rem!important;}
+        .py-md-4{padding-top:1.5rem!important;padding-bottom:1.5rem!important;}
+        .pe-md-5{padding-right:3rem!important;}
+        }
+        @media (min-width:992px){
+        .mb-lg-0{margin-bottom:0!important;}
+        .mb-lg-auto{margin-bottom:auto!important;}
+        }
+        @media (min-width:1200px){
+        .mt-xl-0{margin-top:0!important;}
+        .py-xl-0{padding-top:0!important;padding-bottom:0!important;}
+        }
+        .bg-gray{background:#27272a;}
+        @media (min-width:1200px){
+        .rounded-lg-5{border-radius:2rem!important;}
+        }
+        @media (max-width:338px){
+        .logo-nav-img{width:200px!important;height:auto;}
+        }
+        .btn-link{color:#ffffff85;text-decoration:none;}
+        .btn-link:hover{color:var(--bs-warning);}
+        body{--space:1rem;}
+        .game-thumb:hover{transform:scale(105%);}
+        *{scrollbar-width:auto;scrollbar-color:var(--bs-warning) var(--bs-body-bg);}
+        *::-webkit-scrollbar{width:16px;}
+        *::-webkit-scrollbar-track{background:var(--bs-body-bg);}
+        *::-webkit-scrollbar-thumb{background-color:var(--bs-warning);border-radius:10px;border:3px solid #fff;}
+        .game-container{overflow:hidden;border-radius:18px;}
+        .game-iframe-container{position:relative;overflow:hidden;width:100%;min-height:500px;}
+        .game-iframe{position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%;z-index:10;}
+        #game{margin:auto;overflow:hidden;}
+        iframe{width:100%;overflow:hidden;}
+        #loader{position:relative;overflow:hidden;height:500px;margin:auto;color:#fff;text-align:left;}
+        .preview #playGame{height:100%;text-align:center;margin:auto;cursor:pointer;}
+        .preview .glow{width:100%;max-width:815px;text-align:center;filter:blur(15px) brightness(1.2);aspect-ratio:815 / 500;opacity:.4;}
+        .preview .play{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;flex-direction:column;}
+        .preview .playimg{overflow:hidden;width:190px;margin:50px auto 0 auto;border:solid 2px rgba(255,255,255,0.4);border-radius:20px;}
+        .playBT{display:flex;justify-content:center;align-items:center;width:160px;height:60px;padding:0 20px;margin:20px auto 50px auto;border-radius:30px;background-color:#222;box-shadow:0 0 8px 0 rgba(0,0,0,0.3);transition:all 400ms cubic-bezier(.47,1.64,.41,.8);}
+        .playBT span{margin:0 10px;color:#f3f3f3;font-size:19px;line-height:19px;white-space:nowrap;font-weight:700;}
+        .playBT:hover{transform:scale(1.1);}
+        #fullscreenDiv{display:none;position:static;height:20%;padding:20px;}
+        #bgame{background-color:#000;}
+        .brand-logo{text-align:center;margin-top:25px;}
+        .content-box{background:rgba(152,166,142,0.08);border:1px solid #495057;backdrop-filter:blur(9.65px);border-radius:20px;}
+        @media (min-width:1200px){
+        .col-xl-2{flex:0 0 auto!important;width:16.66666667%!important;}
+        }
+        @media (max-width:1199px){
+        .header_ad_banner{display:none;}
+        }
+        .game-icon{border-radius:2px;margin-right:.25rem!important;}
+        .game-thumb{height:70px;width:70px;border-radius:1rem!important;}
+        @media (max-width:550px){
+        .game-thumb{height:70px;width:70px;}
+        .gm-game-title{font-size:1rem;}
+        }
+        @media (min-width:1200px){
+        .col-xl-2{flex:0 0 auto!important;width:16.66666667%!important;}
+        }
+        @media (max-width: 1199px){
+        .header_ad_banner{display:none;}
+        }
+        @media (max-width: 600px){
+        .logo-nav-img{width:240px;height:38px;max-width:100%;object-fit:cover;}
+        .playvio-brand{width:327px;height:94px;max-width:100%;object-fit:cover;aspect-ratio:auto 327 / 94;}
+        .preview .glow{width:auto;max-width:100%;height:500px;object-fit:cover;aspect-ratio:364 / 500;}
+        .thumb-image{width:190px;height:190px;max-width:100%;object-fit:cover;aspect-ratio:1 / 1;}
+        .rate-div{flex-direction:column;align-items:flex-start;justify-content:flex-start;}
+        .rating-info{display:flex;margin-top:10px;font-size:12px;line-height:1.5;}
+        .rating-info span{margin-bottom:5px;margin-right:5px;}
+        .jq-ry-container{padding-left:0;}
+        }
+        .flag-img{width:20px;height:20px;max-width:100%;object-fit:cover;aspect-ratio:1 / 1;}
+        .text-decoration-none{text-decoration:none;}
+        #loader{position:relative;}
+        #loader{position:relative;flex:1 1 auto;min-height:0;}
+        #gameIframe .game-container,#gameIframe .game-content,#gameIframe .game-iframe-container,#gameIframe #bgame,#gameIframe #iframe{display:flex;flex-direction:column;min-height:0;}
+        .reward-card{width:min(620px,90vw);padding:22px 18px;border-radius:18px;}
+        .reward-bar{height:12px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);}
+        .reward-fill{height:100%;width:0;border-radius:999px;background:#fbf38b;transition:width .18s ease;}
+        .reward-text{margin-top:14px;text-align:center;font-weight:700;font-size:22px;color:rgba(255,255,255,.95);}
+        .reward-overlay{display:none;position:fixed;inset:0;place-items:center;z-index:2147483647;}
+        .game-icon{border-radius:2px;margin-right:.25rem!important;}
+        .game-header{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;min-height:55px;height:auto;overflow:hidden;color:#fff;width:100%;margin-top:12px;-webkit-box-sizing:border-box;box-sizing:border-box;padding:4px 10px;background:#27272a;border-radius:8px;}
+        .game-header-box{display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+        .game-title{padding-left:10px;}
+        .game-header-extend{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;}
+        .rate-div{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;justify-content:space-around;padding-left:15px;color:#292433;font-size:16px;font-weight:500;line-height:.5;}
+        .rating-info{color:#fff;}
+        .jq-ry-container{position:relative;padding:0 5px;line-height:0;display:block;cursor:pointer;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;direction:ltr;}
+        .jq-ry-container>.jq-ry-group-wrapper{position:relative;width:100%;}
+        .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group{position:relative;line-height:0;z-index:10;white-space:nowrap;}
+        .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group>svg{display:inline-block;}
+        .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group{width:100%;}
+        .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group{width:0;z-index:11;position:absolute;top:0;left:0;overflow:hidden;}
+        @media (max-width:650px){
+        .game-title{width:100%;}
+        .game-header-extend{width:100%;justify-content:center;}
+        }
+        .level-game-thumb{height:170px;width:170px;border-radius:1rem !important;}
+        @media (max-width:360px) {.level-game-thumb{height:115px;width:115px;}}@media (min-width:360px) and (max-width:425px) {.level-game-thumb{height:135px;width:135px;}}
+        @media (max-width:576px) {.ps-sm-0{padding-left: 0px;padding-right: 0px}}
+        .g-3{--bs-gutter-x:1rem;--bs-gutter-y:1rem;}.pb-0{padding-bottom:0px!important}
+        .card {--bs-card-spacer-y: 1rem;--bs-card-spacer-x: 1rem;--bs-card-title-spacer-y: 0.5rem;--bs-card-border-width: var(--bs-border-width);--bs-card-border-color: var(--bs-border-color-translucent);--bs-card-border-radius: var(--bs-border-radius);--bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));--bs-card-cap-padding-y: 0.5rem;--bs-card-cap-padding-x: 1rem;--bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);--bs-card-bg: var(--bs-body-bg);--bs-card-img-overlay-padding: 1rem;--bs-card-group-margin: 0.75rem;position: relative;display: flex;flex-direction: column;min-width: 0;word-wrap: break-word;}
+        .sticky-ad-slot{min-height:90px}
+        .sticky-footer-ad{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 -2px 10px rgb(0 0 0 / .15);display:flex;align-items:center;justify-content:center;min-height:50px;padding:4px 30px 4px 4px}
+        .sticky-ad-close{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;border:none;background:rgb(0 0 0 / .6);color:#fff;font-size:14px;line-height:1;cursor:pointer}
+        .ads-section{text-align:center;justify-content:center;align-items:center;position:relative;display:flex}
+        .gpt-728x90-slot{min-height:90px}
+        @media (max-width:480px){.sticky-footer-ad{min-height:50px}}
+        @media (min-width:1024px){.gpt-728x90-slot{min-width:728px}.sticky-ad-slot{min-width:970px}.rate-div{min-width:291px;}.game-rating-wrap{min-width:360px;}.jq-ry-container{min-width:140px;}.rating-info {min-width:137px;}}
+        @media (max-width:1023px){.gpt-728x90-slot{display:none!important}.sticky-footer-ad{display:none!important}}
+    </style>
+    <link rel="preload" href="https://geodash.org/css/last-style.css?v=2" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://geodash.org/css/last-style.css?v=2">
+    </noscript>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://geodash.org/apple-touch-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://geodash.org/favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://geodash.org/favicon-16x16.png?v=1">
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl py-3">
+    <div class="container-fluid px-md-5">
+        <a class="navbar-brand" href="https://geodash.org/">
+            <img src="https://geodash.org/images/Geometry-Dash.png" width="240" height="38" alt="GeoDash.org - Play Geometry Dash Online" class="logo-nav-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+                class="navbar-nav ms-auto mb-2 mb-lg-0 bg-gray rounded-3 rounded-lg-5 px-3 border mt-2 mt-xl-0 py-2 py-xl-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://geodash.org/">
+                        <img src="https://geodash.org/images/home.webp" width="20" height="20" alt="menu icon" class="me-2">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="https://geodash.org/images/games.webp" width="20" height="20" alt="menu icon" class="me-2">
+                        All Game
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://geodash.org/game/geometry-dash-lite/">Geometry Dash Lite</a></li>
+                        <li><a class="dropdown-item" href="https://geodash.org/game/geometry-dash-meltdown/">Geometry Dash Meltdown</a></li>
+                        <li><a class="dropdown-item" href="https://geodash.org/game/geometry-dash-world/">Geometry Dash World</a></li>
+                        <li><a class="dropdown-item" href="https://geodash.org/game/geometry-dash-subzero/">Geometry Dash Subzero</a></li>
+                        <li><a class="dropdown-item" href="https://geodash.org/game/geometry-dash-scratch/">Geometry Dash Scratch</a></li>
+                        <li><a class="dropdown-item" href="https://geodash.org/games/">Games</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="https://geodash.org/images/games.webp" width="20" height="20" alt="menu icon" class="me-2">
+                        Levels
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://geodash.org/hot/">Hot</a></li>
+                        <li><a class="dropdown-item" href="https://geodash.org/level/easy/">Easy</a></li>
+                        <li><a class="dropdown-item" href="https://geodash.org/level/normal/">Normal</a></li>
+                        <li><a class="dropdown-item" href="https://geodash.org/level/hard/">Hard</a></li>
+                        <li><a class="dropdown-item" href="https://geodash.org/level/insane/">Insane</a></li>
+                        <li><a class="dropdown-item" href="https://geodash.org/level/demon/">Demon</a></li>
+                        <li><a class="dropdown-item" href="https://geodash.org/popular/">Popular</a></li>
+                    </ul>        
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://geodash.org/game/geometry-arrow/"> <img src="https://geodash.org/images/games.webp" width="20" height="20"
+                            alt="menu icon" class="me-2">Geometry Arrow</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>    <main>
+        <div class="container-fluid">
+            
+<div class="row justify-content-center py-md-4 mb-2">
+    <div class="col-xl-2 col-12 text-center header_ad_banner px-3 pb-3"></div>
+    <div class="col-md-10 col-lg-8 col-12 text-center">
+        <div class="ads-section mb-3">
+    <div id='div-gpt-ad-1782890626569-0' class="gpt-728x90-slot"></div>
+</div>        <div id="gameIframe">
+            <div class="game-container">
+                <div class="game-content" data-id="169">
+                    <div id="allow_mobile_version"></div>
+                    <div class="game-iframe-container" id="game-player">
+                        <div id="mobile-back-button" draggable="true">
+                            <i class="bi bi-x-circle-fill"></i>
+                        </div>
+                        <div id="bgame" class="rounded-44">
+                            <div id="iframe">
+                                <div id="fullscreenDiv"></div>
+                                <div id="game" style="display:none;" class="rounded-44">
+                                    <iframe class="game-iframe rounded-44" id="gameiframe" src="about:blank"
+                                        data-url="https://geodashlite.pages.dev/" width="480"
+                                        height="800" allow="autoplay" allowfullscreen></iframe>
+                                </div>
+                                <div id="loader" class="preview rounded-44">
+                                    <div id="playGame">
+                                        <picture>
+                                            <source media="(max-width: 600px)" srcset="https://geodash.org/images/gd-mobile-image.webp">
+                                            <source media="(min-width: 601px)" srcset="https://geodash.org/images/geodash-game-image.webp">
+                                            <img src="https://geodash.org/images/geodash-game-image.webp"
+                                                alt="Geometry Dash Lite Game"
+                                                width="815"
+                                                height="500"
+                                                class="glow"
+                                                fetchpriority="high"
+                                                decoding="async"
+                                                loading="eager">
+                                        </picture>
+                                        <div class="play">
+                                                                                        <div class="playimg">
+                                                <img 
+                                                src="https://geodash.org/images/thumb-geodash-image.webp"
+                                                alt="Geometry Dash Lite Game"
+                                                width="190"
+                                                height="190"
+                                                loading="lazy"
+                                                fetchpriority="low"
+                                                class="thumb-image"
+                                                >
+                                            </div>
+                                            <div class="playBT">
+                                                <span style="font-size:23px">Play Now</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="rewardOverlay" class="reward-overlay" aria-live="polite" aria-busy="true">
+    <div class="reward-card">
+        <div class="reward-bar">
+        <div class="reward-fill" id="rewardFill" style="width:0%"></div>
+        </div>
+        <div class="reward-text">
+        Loading <span id="rewardPct">0%</span>
+        </div>
+    </div>
+</div>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-header mb-4">
+                <div class="game-header-box">
+                    <div class="game-title"><h1 class="fw-bold">Geometry Dash</h1></div>
+                    <div class="game-header-extend game-rating-wrap" data-game-id="1">
+                        <div itemscope itemtype="http://schema.org/SoftwareApplication">
+    <meta itemprop="name" content="Geometry Dash Lite">
+    <meta itemprop="applicationCategory" content="GameApplication">
+    <meta itemprop="operatingSystem" content="Web Browser">
+    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+        <meta itemprop="worstRating" content="1">
+        <meta itemprop="bestRating" content="5">
+        <meta itemprop="ratingValue" content="4.1">
+        <div class="rate-div">
+            <div id="rateYo" class="jq-ry-container"></div>
+            <div class="rating-info">
+                <span id="rateCount" itemprop="ratingCount">60557</span><span id="voteTxt"> votes</span>
+                <span id="rateAverage">4.1</span>
+            </div>
+        </div>
+        <div id="ratingMessage"></div>
+    </div>
+    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <meta itemprop="category" content="free">
+        <meta itemprop="price" content="0">
+        <meta itemprop="priceCurrency" content="USD">
+    </span>
+</div>
+<button class="btn" id="fullScreenBtn"><img src="https://geodash.org/images/fullscreen-icon.svg" width="24" height="24" alt="icon" class="me-2"></button>
+<button class="btn d-none" id="exitfullScreenBtn"><img src="https://geodash.org/images/exit-fullscreen-icon.svg" width="24" height="24" alt="exit icon" class="me-2"></button>                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="bg-gray rounded-4 rounded-lg-5 px-3 border p-2 mt-2">
+    <div class="d-flex justify-content-center flex-wrap">
+        <a href="https://geodash.org/hot/" class="m-1 mx-2 btn-link"><img src="https://geodash.org/images/fire-emoji.svg" width="17" height="20" alt="fire emoji" class="me-1">Hot</a>
+        <a href="https://geodash.org/level/easy/" class="m-1 mx-2 btn-link">Easy</a>
+        <a href="https://geodash.org/level/normal/" class="m-1 mx-2 btn-link">Normal</a>
+        <a href="https://geodash.org/level/hard/" class="m-1 mx-2 btn-link">Hard</a>
+        <a href="https://geodash.org/level/insane/" class="m-1 mx-2 btn-link">Insane</a>
+        <a href="https://geodash.org/level/demon/" class="m-1 mx-2 btn-link">Demon</a>
+        <a href="https://geodash.org/popular/" class="m-1 mx-2 btn-link"><img src="https://geodash.org/images/start-emoji.svg" width="17" height="17" alt="star emoji" class="me-1">Popular</a>
+    </div>
+</div>    </div>
+    <div class="col-xl-2 col-12 text-center bottomad_ad_banner px-3 pb-3"></div>
+</div>
+<div class="row justify-content-center mb-5">
+   <div class="col-12">
+   <span class="h2 text-center mt-2 mb-4 d-block">Geometry Games</span>
+   </div>
+    <div class="col-md-10 col-lg-8 col-12 px-0">
+        <div class="row">
+                                
+            <a href="https://geodash.org/game/geometry-dash-lite/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/trending-badge-v2.svg" src="#" alt="Trending badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="82" height="22">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-lite.webp" src="#" height="112" width="184" alt="Geometry Dash Lite icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash Lite</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-dash-meltdown/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/hot-badge-v2.svg" src="#" alt="Hot badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-meltdown.webp" src="#" height="112" width="184" alt="Geometry Dash Meltdown icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash Meltdown</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-dash-world/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/top-badge-v2.svg" src="#" alt="Top badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-world.webp" src="#" height="112" width="184" alt="Geometry Dash World icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash World</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-dash-subzero/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/hot-badge-v2.svg" src="#" alt="Hot badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-subzero.webp" src="#" height="112" width="184" alt="Geometry Dash Subzero icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash Subzero</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-dash-scratch/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/trending-badge-v2.svg" src="#" alt="Trending badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="82" height="22">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-scratch.webp" src="#" height="112" width="184" alt="Geometry Dash Scratch icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash Scratch</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-arrow/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/top-badge-v2.svg" src="#" alt="Top badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-arrow.webp" src="#" height="112" width="184" alt="Geometry Arrow icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Arrow</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-dash-breeze/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/hot-badge-v2.svg" src="#" alt="Hot badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-breeze.webp" src="#" height="112" width="184" alt="Geometry Dash Breeze icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash Breeze</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/3dash/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/trending-badge-v2.svg" src="#" alt="Trending badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="82" height="22">
+                                <img data-src="https://geodash.org/images/grid-image/3dash.webp" src="#" height="112" width="184" alt="3Dash icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>3Dash</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/space-waves/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/hot-badge-v2.svg" src="#" alt="Hot badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/space-waves.webp" src="#" height="112" width="184" alt="Space Waves icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Space Waves</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-vibes/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/top-badge-v2.svg" src="#" alt="Top badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-vibes.webp" src="#" height="112" width="184" alt="Geometry Vibes icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Vibes</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-portal-challenge/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/trending-badge-v2.svg" src="#" alt="Trending badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="82" height="22">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-portal-challenge.webp" src="#" height="112" width="184" alt="Geometry Portal Challenge icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Portal Challenge</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-dash-impossible-wave/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/hot-badge-v2.svg" src="#" alt="Hot badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-impossible-wave.webp" src="#" height="112" width="184" alt="Geometry Impossible Wave icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Impossible Wave</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-dash-black-line/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/top-badge-v2.svg" src="#" alt="Top badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-black-line.webp" src="#" height="112" width="184" alt="Geometry Dash Black Line icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash Black Line</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-dash-robot/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/trending-badge-v2.svg" src="#" alt="Trending badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="82" height="22">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-robot.webp" src="#" height="112" width="184" alt="Geometry Dash Robot icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash Robot</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-dash-wave-pro/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/hot-badge-v2.svg" src="#" alt="Hot badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-wave-pro.webp" src="#" height="112" width="184" alt="Geometry Dash Wave Pro icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash Wave Pro</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-vibes-3d/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/top-badge-v2.svg" src="#" alt="Top badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-vibes-3d.webp" src="#" height="112" width="184" alt="Geometry Vibes 3D icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Vibes 3D</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/hyper-wave-trial/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/trending-badge-v2.svg" src="#" alt="Trending badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="82" height="22">
+                                <img data-src="https://geodash.org/images/grid-image/hyper-wave-trial.webp" src="#" height="112" width="184" alt="Hyper Wave Trial icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Hyper Wave Trial</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/wave-road-3d/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/top-badge-v2.svg" src="#" alt="Top badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/wave-road-3d-v7.webp" src="#" height="112" width="184" alt="Wave Road 3D icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Wave Road 3D</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-dash-spam/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/hot-badge-v2.svg" src="#" alt="Hot badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-spam.webp" src="#" height="112" width="184" alt="Geometry Dash Spam icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash Spam</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-vibes-x-ball/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/trending-badge-v2.svg" src="#" alt="Trending badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="82" height="22">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-vibes-x-ball.webp" src="#" height="112" width="184" alt="Geometry Vibes X-Ball icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Vibes X-Ball</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-vibes-x-arrow/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/top-badge-v2.svg" src="#" alt="Top badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-vibes-x-arrow.webp" src="#" height="112" width="184" alt="Geometry Vibes X-Arrow icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Vibes X-Arrow</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geo-dash-dart-challenge/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/hot-badge-v2.svg" src="#" alt="Hot badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-dart-challenge.webp" src="#" height="112" width="184" alt="Geometry Dash: Dart 2.2 Challenge icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash: Dart 2.2 Challenge</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-dash-wave/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/trending-badge-v2.svg" src="#" alt="Trending badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="82" height="22">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-dash-wave.webp" src="#" height="112" width="184" alt="Geometry Dash Wave icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Dash Wave</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-vibes-monster/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/top-badge-v2.svg" src="#" alt="Top badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-vibes-monster.webp" src="#" height="112" width="184" alt="Geometry Vibes Monster icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Vibes Monster</span>
+                </div>
+            </a>
+                                
+            <a href="https://geodash.org/game/geometry-arrow-2/" class="px-1 col-sm-4 col-md-4 col-lg-2 col-6 group align-items-center mb-3 text-decoration-none grid-game">
+                                    <img data-src="https://geodash.org/images/badges/hot-badge-v2.svg" src="#" alt="Hot badge" class="lozad game-badge absolute top-1 left-1 z-30 group-hover:hidden" width="70" height="24">
+                                <img data-src="https://geodash.org/images/grid-image/geometry-arrow-2.webp" src="#" height="112" width="184" alt="Geometry Arrow 2 icon" class="grid-game-thumb lozad">
+                <div class="absolute bottom-0 text-center hidden left-0 w-full px-2 py-1.5 text-[15px] text-white1 truncate font-bold bg-opacity-50 backdrop-blur-sm rounded-b-1xl z-20 group-hover:block">
+                    <span>Geometry Arrow 2</span>
+                </div>
+            </a>
+                </div>
+    </div>
+</div>                
+
+<div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8 col-12">
+        <div class="row g-3 p-3 p-md-4 mb-4 bg-gray border rounded-4">
+            <div class="col-md-12">
+                <h2 class="fw-bold mb-3">What Is Geometry Dash?</h2>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="card p-3 h-100 pb-0">
+                <p><a href="https://geodash.org/">Geometry Dash</a> is a popular rhythm-based platform game created by RobTop Games and developed by Robert Topala. Players control a cube and guide it through obstacle-filled levels that move in sync with the music.</p>
+                <p>At Geo Dash, you can play <b>Geometry Dash</b> online directly in your browser without downloading anything. The game is known for its simple controls, fast-paced gameplay, and thousands of community-created levels. Whether you're a beginner or an experienced player, GD offers a fun challenge that tests your timing, reflexes, and focus.</p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="card p-3 h-100 pb-0">
+                <img src="https://geodash.org/images/game-images/Geometry-Dash-Cover.webp" alt="Geometry Dash online game" srcset="https://geodash.org/images/game-images/mobile-Geometry-Dash-Cover.webp 274w,https://geodash.org/images/game-images/Geometry-Dash-Cover.webp 800w" sizes="(max-width: 600px) 274px, 400px" width="400" height="245" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div class="p-3 p-md-4 mb-4 bg-gray border rounded-4">
+            <h2 class="fw-bold mb-3">How To Play Geometry Dash?</h2>
+            <p>Easy to learn, but hard to master. Follow the beat, time your jumps, and avoid obstacles to reach the finish line.</p>
+            <p class="mb-3"><b>Controls:</b></p>
+            <ul>
+                <li>Click the mouse, tap the screen, or press the spacebar to jump.</li>
+                <li>Hold the button in certain modes to fly or move upward.</li>
+                <li>Release to descend or return to normal movement.</li>
+            </ul>
+            <p class="mb-3"><b>Tips for Beginners:</b></p>
+            <ul>
+                <li>Start with easy levels like Stereo Madness.</li>
+                <li>Use Practice Mode to learn difficult sections.</li>
+                <li>Watch for jump pads, rings, and gravity portals.</li>
+                <li>Follow the rhythm of the music for better timing.</li>
+            </ul>
+            <p>The more you play, the better your timing, focus, and reaction speed will become.</p>
+            
+        </div>
+        <div class="p-3 p-md-4 mb-4 bg-gray border rounded-4">
+            <h2 class="fw-bold mb-3">Main Features of Geometry Dash</h2>
+            
+            <p>Geometry Dash offers a mix of rhythm-based gameplay, challenging levels, and player creativity. The game includes dozens of official levels with different themes, obstacles, and difficulty settings. As you progress, you'll unlock new icons, colors, and rewards by completing levels and collecting secret coins.</p>
+            <p>Key Features:</p>
+            <ul>
+                <li>22 Official levels ranging from Easy to Demon difficulty.</li>
+                <li>Simple one-touch controls with multiple game modes.</li>
+                <li>Hidden coins, achievements, and unlockable rewards.</li>
+                <li>Character customization with different icons and colors.</li>
+            </ul>
+            <p>At Geo Dash, you can enjoy the core gameplay experience directly in your browser. The level editor and online level sharing are only available in the full version. However, the browser version still lets you enjoy the game's exciting levels, music, and challenges.</p>
+            
+        </div>
+        <div class="p-3 p-md-4 mb-4 bg-gray border rounded-4">
+            <h2 class="fw-bold mb-3">Tips and Strategies To Improve Gameplay</h2>
+            <p>Improving in Geometry Dash takes patience and practice. Even top players fail hundreds of times while learning difficult levels. Focus on building consistency instead of rushing through stages.</p>
+            <p><b>Tips from Experienced Players:</b></p>
+            <ul>
+                <li>Learn the level layout before collecting secret coins.</li>
+                <li>Use Practice Mode to memorize difficult sections.</li>
+                <li>Follow the music rhythm to improve jump timing.</li>
+                <li>Replay easier levels to build muscle memory and control.</li>
+                <li>Take short breaks when frustration starts affecting your performance.</li>
+            </ul>
+            <p>The best players don't rely on luck. They learn obstacle patterns, improve their timing, and stay consistent with practice.</p>
+        </div>
+        <div class="row g-3 p-3 p-md-4 mb-4 bg-gray border rounded-4">
+            <div class="col-md-12">
+                <h2 class="fw-bold mb-3">Geometry Dash Spins-off</h2>
+                <p>Yes, Geometry Dash has several official versions. Each one offers unique content while keeping the same core gameplay of jumping, flying, and avoiding obstacles in sync with music.</p>
+            </div>
+            <div class="col-md-6 d-flex mb-3">
+                <div class="content-box card p-3 mb-3 h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="fw-bold mb-3">Geometry Dash Full Version</h3>
+                </div>
+                <p class="mb-0">Geometry Dash (Full Version) is the complete game. It includes more than 22 official levels, online level sharing, and a powerful level editor. Players can earn daily rewards, unlock achievements, collect secret coins, and customize their icons. The game also features Gauntlets, Map Packs, and millions of community-made levels.</p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex mb-3">
+                <div class="content-box card p-3 mb-3 h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="fw-bold mb-3">Geometry Dash Lite</h3>
+                </div>
+                <p class="mb-0"><a href="https://geodash.org/game/geometry-dash-lite/">Geo Dash Lite</a> is the free version of the game. It contains a limited selection of official levels and introduces new players to the game's mechanics. Online features, level creation tools, and customization options are more limited than in the full version.</p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex mb-3">
+                <div class="content-box card p-3 mb-3 h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="fw-bold mb-3">Geometry Dash Meltdown</h3>
+                </div>
+                <p class="mb-0">Known for its fiery theme, this spin-off includes three exclusive levels: The Seven Seas, Viking Arena, and Airborne Robots. Music by F-777 plays a major role in the experience, helping set the pace for each level. It also introduces new obstacles and gameplay mechanics that are not found in earlier versions.</p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex mb-3">
+                <div class="content-box card p-3 mb-3 h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="fw-bold mb-3">Geometry Dash World</h3>
+                </div>
+                <p class="mb-0">Players can explore two worlds filled with short levels and quick challenges. Daily quests, rewards, and treasure chests give extra reasons to keep playing. Selected online content is also available. Several features introduced here later became part of major Geometry Dash updates.</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="content-box card p-3 mb-3">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="fw-bold mb-3">Geometry Dash SubZero</h3>
+                </div>
+                <p class="mb-2">This standalone version includes three challenging levels: Press Start, Nock Em, and Power Trip. It features advanced visual effects, modern gameplay mechanics, and music from popular electronic artists, making it one of the most visually impressive GD spin-offs.</p>
+                <p class="mb-0">Each version offers different levels, music, and challenges. However, they all share the fast-paced rhythm-based gameplay, precise timing, and skill-focused mechanics that made GD a global success.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-10 col-lg-8 col-12">
+        <div class="col-md-12 content-box p-3 p-md-4 mb-3">
+            <h2 class="fw-bold mb-2">FAQs</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item mb-3">
+                    <h3 class="accordion-header accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Can I Play Geometry Dash Online For Free?
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                        <div class="accordion-body">
+                        <p>Yes. You can play Geometry Dash online through Geo Dash without downloading or installing anything. Simply visit GeoDash.org, click Play, and jump straight into the game.</p>    
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-3">
+                    <h3 class="accordion-header accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What Are The Different Difficulty Levels In Geometry Dash?
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                        <div class="accordion-body">
+                            <p>The game features several difficulty levels, including Auto, Easy, Normal, Hard, Harder, Insane, and Demon. As the difficulty increases, levels require better timing, faster reactions, and greater control to complete.</p>    
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-3">
+                    <h3 class="accordion-header accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                        What Are Secret Coins In Geometry Dash?
+                    </h3>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                        <div class="accordion-body">
+                            <p>Secret Coins are collectible items hidden throughout Geometry Dash official levels. Players earn rewards by finding and collecting all secret coins in a level. Secret Coins unlock achievements, icons, colors, and other customization options. The main game contains 149 secret coins across official levels, map packs, gauntlets, and other game content.</p>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </main>
+    <footer>
+    <div class="container-fluid pt-4 px-md-5 bg-gray">
+        <div class="row justy-content-evently">
+            <div class="col-lg-4 col-12 pe-md-5 mb-4 mb-lg-auto text-center">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://geodash.org/images/footer-img.png" width="303" height="136" alt="Footer character image" class="mx-auto d-block img-fluid lozad">
+                <a href="https://geodash.org/">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://geodash.org/images/Geometry-Dash.png" width="240" height="38" alt="Footer Logo" class="img-fluid my-4 lozad">
+                </a>
+                <div class="mb-2 my-2">
+                    <a href="https://www.instagram.com/geodashgame" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://geodash.org/images/new-insta.svg" width="24" height="23" alt="insta social" class="mx-2 lozad"></a>
+                    <a href="https://www.facebook.com/people/Geo-Dash/61563046889799/" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://geodash.org/images/new-fb.svg" width="24" height="23" alt="fb social" class="mx-2 lozad"></a>
+                    <a href="https://x.com/geodashfree" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://geodash.org/images/new-x.svg" width="24" height="23" alt="twitter social" class="mx-2 lozad"></a>
+                    <a href="https://www.youtube.com/@geodashonline" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://geodash.org/images/new-yt.svg" width="24" height="23" alt="yt social" class="mx-2 lozad"></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 col-12 mb-4 mb-lg-auto">
+                <p class="h5 mb-4 opacity-100">Games</p>
+                <ul class="list-unstyled">   
+                    <li class="mb-2"><a class="btn-link" href="https://geodash.org/game/geometry-dash-lite/">Geometry Dash Lite</a></li>
+                    <li class="mb-2"><a class="btn-link" href="https://geodash.org/game/geometry-dash-meltdown/">Geometry Dash Meltdown</a></li>
+                    <li class="mb-2"><a class="btn-link" href="https://geodash.org/game/geometry-dash-world/">Geometry Dash World</a></li>
+                    <li class="mb-2"><a class="btn-link" href="https://geodash.org/game/geometry-dash-subzero/">Geometry Dash Subzero</a></li>
+                    <li class="mb-2"><a class="btn-link" href="https://geodash.org/game/geometry-dash-scratch/">Geometry Dash Scratch</a></li>
+                    <li class="mb-2"><a class="btn-link" href="https://geodash.org/game/geometry-arrow/">Geometry Arrow</a></li>
+                    <li class="mb-2"><a class="btn-link" href="https://geodash.org/game/geometry-dash-breeze/">Geometry Dash Breeze</a></li>
+    </ul>
+            </div>
+            <div class="col-md-6 col-lg-2 col-12 mb-4 mb-lg-auto">
+                <p class="h5 mb-4 opacity-100">Quick Links</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="btn-link" href="https://geodash.org/about/">About</a></li>
+                    <li class="mb-2"><a class="btn-link" href="https://geodash.org/contact/">Contact</a></li>
+                    <li class="mb-2"><a class="btn-link" href="https://geodash.org/privacy/">Privacy</a></li>
+                    <li class="mb-2"><a class="btn-link" href="https://geodash.org/terms/">Terms</a></li>
+                    <li class="mb-2"><a class="btn-link" href="https://gdforum.freeforums.net/" target="_blank">GD Community</a></li>
+                    <li class="mb-2"><a class="btn-link" href="https://www.youtube.com/channel/UCCBtdKOdyp-H2ZWKe2fMKaA" target="_blank">Resources</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-3 col-12 mb-lg-auto pe-md-5">
+                <p class="h5 mb-3 opacity-100">Language</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <ul class="list-unstyled">
+    <li class="mb-2">
+        <button class="btn g-gradient rounded-4 dropdown-toggle ps-0" aria-label="btnLang" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://geodash.org/images/en.webp" alt="En Flag" width="20" class="me-2 flag-img">
+            English
+        </button>
+        <ul class="dropdown-menu">
+                            <li>
+                    <a class="dropdown-item active"
+                    href="https://geodash.org/">
+                        <img src="https://geodash.org/images/en.webp" alt="English" width="20" class="me-2 flag-img">
+                        English
+                    </a>
+                </li>
+                            <li>
+                    <a class="dropdown-item "
+                    href="https://geodash.org/vi/">
+                        <img src="https://geodash.org/images/vi.webp" alt="Viestnamese" width="20" class="me-2 flag-img">
+                        Viestnamese
+                    </a>
+                </li>
+                            <li>
+                    <a class="dropdown-item "
+                    href="https://geodash.org/fr/">
+                        <img src="https://geodash.org/images/fr.webp" alt="French" width="20" class="me-2 flag-img">
+                        French
+                    </a>
+                </li>
+                            <li>
+                    <a class="dropdown-item "
+                    href="https://geodash.org/es/">
+                        <img src="https://geodash.org/images/es.webp" alt="Spanish" width="20" class="me-2 flag-img">
+                        Spanish
+                    </a>
+                </li>
+                            <li>
+                    <a class="dropdown-item "
+                    href="https://geodash.org/pt/">
+                        <img src="https://geodash.org/images/pt.webp" alt="Portuguese" width="20" class="me-2 flag-img">
+                        Portuguese
+                    </a>
+                </li>
+                            <li>
+                    <a class="dropdown-item "
+                    href="https://geodash.org/de/">
+                        <img src="https://geodash.org/images/de.webp" alt="Germany" width="20" class="me-2 flag-img">
+                        Germany
+                    </a>
+                </li>
+                            <li>
+                    <a class="dropdown-item "
+                    href="https://geodash.org/id/">
+                        <img src="https://geodash.org/images/id.webp" alt="Indonesia" width="20" class="me-2 flag-img">
+                        Indonesia
+                    </a>
+                </li>
+                            <li>
+                    <a class="dropdown-item "
+                    href="https://geodash.org/tr/">
+                        <img src="https://geodash.org/images/tr.webp" alt="Turkey" width="20" class="me-2 flag-img">
+                        Turkey
+                    </a>
+                </li>
+                            <li>
+                    <a class="dropdown-item "
+                    href="https://geodash.org/nl/">
+                        <img src="https://geodash.org/images/nl.webp" alt="Dutch" width="20" class="me-2 flag-img">
+                        Dutch
+                    </a>
+                </li>
+                            <li>
+                    <a class="dropdown-item "
+                    href="https://geodash.org/it/">
+                        <img src="https://geodash.org/images/it.webp" alt="Italy" width="20" class="me-2 flag-img">
+                        Italy
+                    </a>
+                </li>
+                            <li>
+                    <a class="dropdown-item "
+                    href="https://geodash.org/ru/">
+                        <img src="https://geodash.org/images/ru.webp" alt="Russia" width="20" class="me-2 flag-img">
+                        Russia
+                    </a>
+                </li>
+                            <li>
+                    <a class="dropdown-item "
+                    href="https://geodash.org/ja/">
+                        <img src="https://geodash.org/images/ja.webp?v=1" alt="Japan" width="20" class="me-2 flag-img">
+                        Japan
+                    </a>
+                </li>
+                    </ul>
+    </li>
+</ul>
+                    </li>
+                    <li class="mb-2">
+                        <a class="btn-link" href="https://geodash.org/dmca-policy/">DMCA & Copyright</a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="btn-link" target="_blank" href="https://chromewebstore.google.com/detail/geometry-dash-play-geomet/ljbmdnbefjjnihkmgnkadnidhfcoohcn?pli=1">
+                            <img src="https://geodash.org/images/chrome-exten-badge.svg" class="img-fluid" width="178" height="40" alt="chrome extension">
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="btn-link" target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/geometry-dash-online/">
+                            <img src="https://geodash.org/images/firefox-ext-badge.svg" class="img-fluid" width="178" height="40" alt="firefox extension">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 text-center mb-3">
+                <hr>
+                <span class="opacity-50 "> Copyright © 2026 GeoDash.org </span>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="sticky-footer-ad" class="sticky-footer-ad" style="display:none;">
+  <button id="sticky-ad-close" class="sticky-ad-close" aria-label="Close ad">&times;</button>
+  <div id="div-gpt-ad-1782890715010-0" class="sticky-ad-slot"></div>
+</div><script>
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            var s = document.createElement('script');
+            s.src = "https://www.googletagmanager.com/gtag/js?id=G-4H734KKV8D";
+            s.async = true;
+            document.head.appendChild(s);
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-4H734KKV8D', { 'anonymize_ip': true });
+        }, 2000);
+    });
+</script>
+    
+<script>
+(() => {
+    "use strict";
+    const GPT_SRC = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+    const REWARDED_UNIT = "/22808483469/rewards";
+    const $ = (sel, root = document) => root.querySelector(sel);
+    const root = $("#gameIframe");
+    const iframe = $("#gameiframe");
+    const btnEnter = $("#fullScreenBtn");
+    const btnExit = $("#exitfullScreenBtn");
+    const gameWrap = $("#game");
+    const loaderWrap = $("#loader");
+    const overlay = $("#rewardOverlay");
+    const playGame = $("#playGame");
+    const fillEl = $("#rewardFill");
+    const pctEl = $("#rewardPct");
+
+    if (!root || !iframe || !gameWrap || !loaderWrap || !overlay) return;
+
+    let playLocked = false;
+    let fakeTimer = null;
+    let gptPromise = null;
+    let gptServicesEnabled = false;
+
+    function setPercent(value) {
+        if (!fillEl || !pctEl) return;
+        const p = Math.max(0, Math.min(100, Math.round(value)));
+        fillEl.style.width = p + "%";
+        pctEl.textContent = p + "%";
+    }
+
+    function startFakeProgress() {
+        stopFakeProgress();
+        let p = 0;
+        setPercent(0);
+        fakeTimer = setInterval(() => {
+            if (p < 55) p += 7;
+            else if (p < 80) p += 3;
+            else if (p < 92) p += 1;
+            else if (p < 96) p += 0.2;
+
+            if (p > 96) p = 96;
+            setPercent(p);
+        }, 160);
+    }
+
+    function stopFakeProgress() {
+        if (fakeTimer) {
+            clearInterval(fakeTimer);
+            fakeTimer = null;
+        }
+    }
+
+    function showLoaderUI() {
+        overlay.classList.remove("is-hidden-for-ad");
+        overlay.classList.add("is-show");
+        if (playGame) {
+            playGame.classList.add("loader-active");
+            playGame.classList.remove("show-gameiframe");
+        }
+        loaderWrap.classList.remove("d-none");
+        gameWrap.classList.add("d-none");
+        setPercent(0);
+        startFakeProgress();
+    }
+
+    function hideLoaderUI() {
+        stopFakeProgress();
+        setPercent(0);
+        overlay.classList.remove("is-show", "is-hidden-for-ad");
+        if (playGame) {
+            playGame.classList.remove("loader-active");
+        }
+    }
+
+    function ensureIframeLoaded() {
+        const url = iframe.getAttribute("data-url");
+        if (!url) return;
+        const current = iframe.getAttribute("src") || "";
+        if (!current || current === "about:blank") {
+            iframe.src = url;
+        }
+    }
+
+    function showGameUI() {
+        ensureIframeLoaded();
+        loaderWrap.classList.add("d-none");
+        gameWrap.classList.remove("d-none");
+        gameWrap.style.display = 'block';
+        if (playGame) {
+            playGame.classList.add("show-gameiframe");
+        }
+    }
+
+    function enterUI() {
+        document.body.classList.add("fs-game");
+        if (btnEnter) btnEnter.classList.add("d-none");
+        if (btnExit) btnExit.classList.remove("d-none");
+    }
+
+    function exitUI() {
+        document.body.classList.remove("fs-game");
+        if (btnExit) btnExit.classList.add("d-none");
+        if (btnEnter) btnEnter.classList.remove("d-none");
+    }
+
+    function isNativeFullscreen() {
+        return !!(
+            document.fullscreenElement ||
+            document.webkitFullscreenElement ||
+            document.msFullscreenElement
+        );
+    }
+
+    function requestNativeFullscreen(el) {
+        const fn =
+            el.requestFullscreen ||
+            el.webkitRequestFullscreen ||
+            el.msRequestFullscreen;
+        if (!fn) return Promise.resolve(false);
+        try {
+            const result = fn.call(el);
+            if (result && typeof result.then === "function") {
+                return result.then(() => true).catch(() => false);
+            }
+            return Promise.resolve(true);
+        } catch (e) {
+            return Promise.resolve(false);
+        }
+    }
+
+    function exitNativeFullscreen() {
+        const fn =
+            document.exitFullscreen ||
+            document.webkitExitFullscreen ||
+            document.msExitFullscreen;
+        if (!fn) return Promise.resolve(false);
+        try {
+            const result = fn.call(document);
+            if (result && typeof result.then === "function") {
+                return result.then(() => true).catch(() => false);
+            }
+            return Promise.resolve(true);
+        } catch (e) {
+            return Promise.resolve(false);
+        }
+    }
+
+    function syncFullscreenUI() {
+        if (isNativeFullscreen()) {
+            enterUI();
+        } else {
+            exitUI();
+        }
+    }
+
+    document.addEventListener("fullscreenchange", syncFullscreenUI);
+    document.addEventListener("webkitfullscreenchange", syncFullscreenUI);
+    document.addEventListener("msfullscreenchange", syncFullscreenUI);
+
+    function loadGptOnce(timeoutMs = 12000) {
+        const gt = window.googletag;
+        if (gt && gt.apiReady && gt.enums) {
+            return Promise.resolve(true);
+        }
+        if (gptPromise) return gptPromise;
+        gptPromise = new Promise((resolve) => {
+            window.googletag = window.googletag || { cmd: [] };
+            if (!document.querySelector('script[src*="securepubads.g.doubleclick.net/tag/js/gpt.js"]')) {
+                const script = document.createElement("script");
+                script.src = GPT_SRC;
+                script.async = true;
+                script.onerror = () => resolve(false);
+                document.head.appendChild(script);
+            }
+
+            const started = Date.now();
+            const timer = setInterval(() => {
+                const g = window.googletag;
+                if (g && g.apiReady && g.enums && g.cmd) {
+                    clearInterval(timer);
+                    resolve(true);
+                } else if (Date.now() - started > timeoutMs) {
+                    clearInterval(timer);
+                    resolve(false);
+                }
+            }, 50);
+        });
+        return gptPromise;
+    }
+
+    function enableServicesOnce(gt) {
+        if (gptServicesEnabled) return;
+        gt.enableServices();
+        gptServicesEnabled = true;
+    }
+
+    async function showRewardedOrSkip({
+        adUnitPath = REWARDED_UNIT,
+        readyTimeoutMs = 8000,
+        closeTimeoutMs = 60000
+    } = {}) {
+        const ok = await loadGptOnce();
+        const gt = window.googletag;
+        if (!ok || !gt || !gt.apiReady || !gt.enums) {
+            return { shown: false, reason: "gpt_not_ready" };
+        }
+        return new Promise((resolve) => {
+            let slot = null;
+            let finished = false;
+            let readySeen = false;
+            let granted = false;
+            let closeTimer = null;
+            const pubads = gt.pubads();
+            const cleanup = () => {
+                try {
+                    pubads.removeEventListener("rewardedSlotReady", onReady);
+                    pubads.removeEventListener("rewardedSlotGranted", onGranted);
+                    pubads.removeEventListener("rewardedSlotClosed", onClosed);
+                } catch (e) { }
+                try {
+                    if (slot) gt.destroySlots([slot]);
+                } catch (e) { }
+            };
+            const done = (result) => {
+                if (finished) return;
+                finished = true;
+                if (closeTimer) {
+                    clearTimeout(closeTimer);
+                    closeTimer = null;
+                }
+                clearTimeout(readyTimer);
+                cleanup();
+                resolve(result);
+            };
+            const readyTimer = setTimeout(() => {
+                done({ shown: false, reason: "no_fill_or_timeout" });
+            }, readyTimeoutMs);
+
+            function onReady(evt) {
+                readySeen = true;
+                setPercent(100);
+                overlay.classList.add("is-hidden-for-ad");
+                try {
+                    evt.makeRewardedVisible();
+                } catch (e) {
+                    done({ shown: false, reason: "make_visible_failed" });
+                    return;
+                }
+                closeTimer = setTimeout(() => {
+                    done({ shown: true, granted, reason: "close_timeout" });
+                }, closeTimeoutMs);
+            }
+            function onGranted() {
+                granted = true;
+            }
+
+            function onClosed() {
+                overlay.classList.remove("is-hidden-for-ad");
+                if (!readySeen) {
+                    done({ shown: false, reason: "closed_before_ready" });
+                    return;
+                }
+                done({ shown: true, granted, reason: "closed" });
+            }
+
+            gt.cmd.push(() => {
+                try {
+                    pubads.addEventListener("rewardedSlotReady", onReady);
+                    pubads.addEventListener("rewardedSlotGranted", onGranted);
+                    pubads.addEventListener("rewardedSlotClosed", onClosed);
+                    slot = gt.defineOutOfPageSlot(
+                        adUnitPath,
+                        gt.enums.OutOfPageFormat.REWARDED
+                    );
+                    if (!slot) {
+                        done({ shown: false, reason: "slot_not_created" });
+                        return;
+                    }
+                    slot.addService(pubads);
+                    enableServicesOnce(gt);
+                    gt.display(slot);
+                    try {
+                        pubads.refresh([slot]);
+                    } catch (e) { }
+                } catch (e) {
+                    done({ shown: false, reason: "setup_failed" });
+                }
+            });
+        });
+    }
+
+    async function playFlow() {
+        if (playLocked) return;
+        playLocked = true;
+        const loaderWrap = document.getElementById("loader");
+        const gameWrap = document.getElementById("game");
+        if (document.body.classList.contains("fs-game")) {
+            gameWrap.style.height = `500px`;
+        } else {
+            gameWrap.style.height = `${loaderWrap.offsetHeight}px`;
+        }
+        gameWrap.style.width = '100%';
+        try {
+            showLoaderUI();
+            const result = await showRewardedOrSkip({
+                readyTimeoutMs: 9000,
+                closeTimeoutMs: 60000
+            });
+            if (result.shown === false) {
+                gameWrap.style.display = 'block';
+                gameWrap.style.height = `${gmSectHeight}px`;
+            }
+            hideLoaderUI();
+            showGameUI();
+        } catch (err) {
+            hideLoaderUI();
+            showGameUI();
+        } finally {
+            playLocked = false;
+        }
+    }
+
+    document.addEventListener(
+        "click",
+        (e) => {
+            const playBtn = e.target.closest(".playBT");
+            if (!playBtn) return;
+
+            e.preventDefault();
+            playFlow();
+        },
+        { passive: false }
+    );
+
+    if (btnEnter && !btnEnter.__boundFreshFs) {
+        btnEnter.__boundFreshFs = true;
+        btnEnter.addEventListener(
+            "click",
+            async (e) => {
+                e.preventDefault();
+                const ok = await requestNativeFullscreen(root);
+                if (!ok) {
+                    enterUI();
+                }
+            },
+            { passive: false }
+        );
+    }
+
+    if (btnExit && !btnExit.__boundFreshFs) {
+        btnExit.__boundFreshFs = true;
+        btnExit.addEventListener(
+            "click",
+            async (e) => {
+                e.preventDefault();
+                if (isNativeFullscreen()) {
+                    await exitNativeFullscreen();
+                } else {
+                    exitUI();
+                }
+            },
+            { passive: false }
+        );
+    }
+
+    function defineAdSlots(){
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function () {
+            const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+            if (!isDesktop) return;
+            const mapping728 = googletag.sizeMapping()
+                .addSize([1024, 0], [728, 90])
+                .addSize([0, 0], [])
+                .build();
+            const mapping970 = googletag.sizeMapping()
+                .addSize([1024, 90], [970, 90], [728, 90])
+                .addSize([0, 0], [], [])
+                .build();
+            googletag.defineSlot('/22808483469/geodash', [728, 90], 'div-gpt-ad-1782890626569-0')
+                .defineSizeMapping(mapping728)
+                .addService(googletag.pubads());
+            googletag.defineSlot('/22808483469/970x90', [970, 90], 'div-gpt-ad-1782890715010-0')
+                .defineSizeMapping(mapping970)
+                .addService(googletag.pubads());
+            googletag.setConfig({singleRequest:true})
+            googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+                if (event.slot.getSlotElementId() === 'div-gpt-ad-1782890715010-0' && !event.isEmpty) {
+                    document.getElementById('sticky-footer-ad').style.display = 'flex';
+                }
+            });
+            googletag.enableServices();
+            googletag.display('div-gpt-ad-1782890626569-0');
+            googletag.display('div-gpt-ad-1782890715010-0');
+        });
+    }
+    syncFullscreenUI();
+    function initAds() {
+       loadGptOnce();
+       defineAdSlots();
+    }
+    window.addEventListener('load', function () {
+        setTimeout(initAds, 4000);
+    });
+})();
+</script>
+<script>
+    let rate_average = 4.1;
+    let rate_count = 60557;
+    let ratingUrl = "https://geodash.org/ratings";
+    let test= 123;
+</script>
+<script src="https://geodash.org/js/starrate-13-7.js" defer></script>
+
+    <script src="https://geodash.org/js/lozad-init.js" defer></script>
+    <script src="https://geodash.org/js/bootstrap-lite.js" defer></script>
+</body>
+</html>
